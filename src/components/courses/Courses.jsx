@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Course from './Course';
 
 const Courses = () => {
 
@@ -15,11 +16,13 @@ const Courses = () => {
     }, []);
 
 
-    console.log(courses);
-
 
     return (
-        <div>Courses</div>
+        <section className='flex-1'>
+            {
+                courses.map(course => <Course key={course.id} course={course} />)
+            }
+        </section>
     )
 }
 
