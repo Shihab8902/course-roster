@@ -1,7 +1,7 @@
 import React from 'react'
 import Icons from '../SVG/Icons';
 
-const Course = ({ course }) => {
+const Course = ({ course, getSElectedCourse }) => {
     const { cover_img, title, description, price, credit_hour } = course;
     return <div className='p-4 bg-white rounded-xl'>
         <div>
@@ -15,7 +15,7 @@ const Course = ({ course }) => {
 
             <Icons credit_hour={credit_hour} price={price} />
 
-            <button className="w-full py-2 bg-[#2F80ED] text-white font-semibold text-lg rounded-lg mt-7">Select</button>
+            <button onClick={() => getSElectedCourse(course)} className="w-full py-2 bg-[#2F80ED] text-white font-semibold text-lg rounded-lg mt-7">Select</button>
 
         </div>
 
