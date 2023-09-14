@@ -20,7 +20,7 @@ const App = () => {
 
   const getSElectedCourse = (course) => {
     if (selectedCourse.includes(course)) {
-      toast('The course is already selected!!');
+      toast('The course is already selected!');
     } else {
       const newRemainingCredit = remainingCredit - course.credit_hour;
       if (newRemainingCredit >= 0) {
@@ -29,7 +29,7 @@ const App = () => {
         setClaimCredit(claimCredit + course.credit_hour);
         setPrice(price + course.price);
       } else {
-        toast("Maximum credit limit exceed!!");
+        toast("Maximum credit limit exceed!");
       }
 
     }
